@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --color-olive-50: #f7f7f5;
+    --color-olive-100: #eceee8;
+    --color-olive-200: #d8dcd2;
+    --color-olive-300: #bcc2b0;
+    --color-olive-400: #9ca38b;
+    --color-olive-500: #7f8770;
+    --color-olive-600: #6b705c;
+    --color-olive-700: #565a4a;
+    --color-olive-800: #474a3e;
+    --color-olive-900: #3d3f35;
+    --color-olive-950: #1f211a;
+
+    --color-navy-50: #f4f6f7;
+    --color-navy-100: #e3e7ea;
+    --color-navy-200: #c9d1d7;
+    --color-navy-300: #a4b0bb;
+    --color-navy-400: #788997;
+    --color-navy-500: #5d6e7c;
+    --color-navy-600: #505d69;
+    --color-navy-700: #454f58;
+    --color-navy-800: #3d444c;
+    --color-navy-900: #1c1e2a;
+    --color-navy-950: #15171f;
+
+    --color-khaki-50: #fbfaf5;
+    --color-khaki-100: #f5f3e8;
+    --color-khaki-200: #e9e5cf;
+    --color-khaki-300: #d9d2ae;
+    --color-khaki-400: #c7bc8b;
+    --color-khaki-500: #b8a86f;
+    --color-khaki-600: #a8935c;
+    --color-khaki-700: #8c794d;
+    --color-khaki-800: #736344;
+    --color-khaki-900: #5f523b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    font-feature-settings: 'cv11', 'ss01';
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6b705c;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #565a4a;
+}
+
+/* Animation utilities */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animation-delay-100 {
+    animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+    animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+    animation-delay: 300ms;
+}
+
+.animation-delay-500 {
+    animation-delay: 500ms;
 }
