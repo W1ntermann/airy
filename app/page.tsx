@@ -7,16 +7,12 @@ import { ContactSection } from '@/widgets/contact-section';
 export default function HomePage() {
     return (
         <>
-            {/* Hero */}
             <HeroSection />
 
-            {/* Переваги */}
+            <ProjectSection />
+        
             <AdvantagesSection />
 
-            {/* Про проєкт */}
-            <ProjectSection />
-
-            {/* Котеджі */}
             <CottagesSection />
 
             {/* 3D простір - placeholder */}
@@ -33,8 +29,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-
-            {/* Контакти */}
+            
             <ContactSection />
         </>
     );

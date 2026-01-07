@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Image from 'next/image';
 import { PROJECT_DATA } from '../lib/constants';
 
 interface ProjectSectionProps {
@@ -45,67 +46,26 @@ export const ProjectSection = ({ className = '' }: ProjectSectionProps) => {
 
                     {/* Visual - Stacked Cards */}
                     <div className="relative h-[500px] lg:h-[600px]">
-                        {/* Background Card */}
-                        <div className="absolute top-0 right-0 w-[80%] h-[70%] rounded-3xl overflow-hidden shadow-2xl">
-                            <div
-                                className="w-full h-full bg-cover bg-center"
-                                style={{
-                                    backgroundImage: `url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop')`,
-                                }}
+                        {/* Background Card - Landscape */}
+                        <div className="absolute top-0 right-0 w-[85%] h-[70%] rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                            <Image
+                                src="/IMG_0577 2.png"
+                                alt="AIRY Landscape"
+                                fill
+                                className="object-cover"
                             />
-                            {/* Logo Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            <div className="absolute top-6 left-6">
-                                <svg
-                                    width="60"
-                                    height="60"
-                                    viewBox="0 0 48 48"
-                                    fill="none"
-                                    className="text-white/80"
-                                >
-                                    <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="1" />
-                                    <path
-                                        d="M24 10L32 34H28L26 28H22L20 34H16L24 10Z"
-                                        stroke="currentColor"
-                                        strokeWidth="1"
-                                        fill="none"
-                                    />
-                                </svg>
-                            </div>
+                            <div className="absolute inset-0 bg-black/10" />
                         </div>
 
-                        {/* Front Card */}
-                        <div className="absolute bottom-0 left-0 w-[75%] h-[60%] rounded-3xl overflow-hidden shadow-2xl border-4 border-navy-900">
-                            <div
-                                className="w-full h-full bg-cover bg-center"
-                                style={{
-                                    backgroundImage: `url('https://images.unsplash.com/photo-1542718610-a1d656d1884c?q=80&w=2070&auto=format&fit=crop')`,
-                                }}
+                        {/* Front Card - Pillar */}
+                        <div className="absolute bottom-0 left-0 w-[70%] h-[65%] rounded-3xl overflow-hidden shadow-2xl border-4 border-navy-900">
+                            <Image
+                                src="/IMG_0579 1.png"
+                                alt="AIRY Logo Pillar"
+                                fill
+                                className="object-cover"
                             />
-                            {/* Brand overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-olive-900/80 via-transparent to-transparent" />
-                            <div className="absolute bottom-6 left-6">
-                                <div className="flex items-center gap-3">
-                                    <svg
-                                        width="40"
-                                        height="40"
-                                        viewBox="0 0 48 48"
-                                        fill="none"
-                                        className="text-white"
-                                    >
-                                        <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="1.5" />
-                                        <path
-                                            d="M24 10L32 34H28L26 28H22L20 34H16L24 10Z"
-                                            stroke="currentColor"
-                                            strokeWidth="1.5"
-                                            fill="none"
-                                        />
-                                    </svg>
-                                    <div className="text-white">
-                                        <div className="text-xl font-light tracking-[0.2em]">AIRY</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div className="absolute inset-0 bg-black/5" />
                         </div>
                     </div>
                 </div>
